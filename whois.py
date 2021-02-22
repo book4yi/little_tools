@@ -3,13 +3,12 @@ import json
 import sys
 import time
 import xlsxwriter
-# 批量whois查询，站长之家的接口，一次最多查50个，1元人民币可以查200次
 
 
 def submit_data(domain):
     global taskid
     url = 'http://apidata.chinaz.com/BatchAPI/Whois'
-    datas = {'key': '2802acbea2d7476faf0ae1687815a1ea', 'domainNames': domain}
+    datas = {'key': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', 'domainNames': domain}
     r = requests.post(url, data=datas)
     json_data = json.loads(r.text)
     print(json_data)
@@ -40,10 +39,10 @@ if __name__ == "__main__":
     domain = ''
     taskid = ''
     a, b, c, d, e, f, g, data_list, all_data = [], [], [], [], [], [], [], [], []
-    workbook = xlsxwriter.Workbook(r'C:\Users\sws123\Desktop\whois2.xlsx')
+    workbook = xlsxwriter.Workbook(r'C:\Users\xxxxx\Desktop\whois2.xlsx')
     worksheet = workbook.add_worksheet('sheet1')
     headings = ['Host', 'ContactPerson', 'Registrar', 'Email', 'Phone', 'CreationDate', 'ExpirationDate']
-    with open(r'C:\Users\sws123\Desktop\100.txt', 'r') as fr:
+    with open(r'C:\Users\xxxxx\Desktop\100.txt', 'r') as fr:
         lines = [line.strip() for line in fr.readlines()]
     for line in lines:
         domain = domain + line + '|'
