@@ -39,7 +39,7 @@ def generate_rule(name):
 
 
 def main():
-    with open(r'C:\Users\sws123\Desktop\name.txt', 'r', encoding='utf-8') as f:
+    with open(r'C:\Users\xxxxxx\Desktop\name.txt', 'r', encoding='utf-8') as f:
         lines = [line.strip() for line in f.readlines()]
     for line in lines:
         generate_rule(line)
