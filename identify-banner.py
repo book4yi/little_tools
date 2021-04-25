@@ -1,8 +1,3 @@
-# -*- coding: utf-8 -*-
-# @Author: book4yi
-# @Date:   2020-08-07 12:20:54
-# @Last Modified by:   book4yi
-# @Last Modified time: 2020-08-07 20:28:54
 import requests
 import time
 from scrapy.selector import Selector
